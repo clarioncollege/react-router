@@ -1,7 +1,5 @@
-import { Outlet } from "react-router-dom";
-
 function AuthPage() {
-  return <Outlet />;
+  return <div>AuthPage</div>;
 }
 
 export default AuthPage;
