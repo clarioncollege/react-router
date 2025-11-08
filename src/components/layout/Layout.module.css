@@ -1,0 +1,97 @@
+:root {
+  --primary: #e50914;
+  --dark: #141414;
+  --light: #f4f4f4;
+  --gray: #8c8c8c;
+  --card-bg: #1f1f1f;
+}
+
+.sidebar {
+  width: 270px;
+  background-color: #0f0f0f;
+  padding: 20px 0;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+.logo_text {
+  font-size: 30px;
+  color: var(--primary);
+  margin-left: 10px;
+}
+
+.logo_i {
+  font-size: 34px;
+  color: var(--primary);
+}
+
+.nav_links {
+  list-style: none;
+  padding: 0 15px;
+}
+
+.nav_links_li {
+  margin-bottom: 10px;
+}
+
+.nav_links_a {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav_links_a:hover,
+.nav_links_active {
+  background-color: #333;
+  color: var(--primary);
+}
+
+.nav_links_i {
+  margin-right: 15px;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Serch input style */
+.search_container {
+  margin: 20px 20px 30px 20px;
+  background: #1f1f1f;
+  padding: 8px 15px;
+  border-radius: 30px;
+  display: flex;
+}
+
+.search_container_input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--light);
+  font-size: 16px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.search_container_button {
+  background: transparent;
+  border: none;
+  color: var(--gray);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 10px;
+}
