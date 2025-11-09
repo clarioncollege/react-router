@@ -10,7 +10,10 @@ import {
 import { classNames } from "../helpers/class-helpers";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const navigation = [{ name: "Dashboard", href: "/admin", current: true }];
+const navigation = [
+  { name: "Dashboard", href: "/admin", current: true },
+  { name: "Get-Started", href: "/auth/login", current: false },
+];
 
 function NavBar() {
   return (
