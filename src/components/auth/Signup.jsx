@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Error from "../common/Error";
 import { useFormValidation } from "../../hooks/use-form-validation";
 
@@ -14,16 +14,14 @@ function Signup() {
   const [passwordType, setPasswordType] = useState("password");
   const [confirmPasswordType, setConfirmPasswordType] = useState("password");
 
-  const [errorMessage, formIsValid, validateFormData] = useFormValidation();
-
-  const navigate = useNavigate();
+  const { error, validateForm, formIsValid } = useFormValidation();
 
   /**
    * Validate form data on each change with debounce of 1000ms
    */
   useEffect(() => {
     const timer = setTimeout(() => {
-      validateFormData(formData);
+      validateForm(formData);
     }, 1000);
 
     return () => clearTimeout(timer);
@@ -51,8 +49,6 @@ function Signup() {
     if (!formIsValid) {
       return;
     }
-
-    navigate("/auth/verify-account");
   };
 
   return (
@@ -63,9 +59,7 @@ function Signup() {
         </h1>
         <p>Sign up to get Started</p>
 
-        {errorMessage && (
-          <Error errorMessage={errorMessage || "Something went wrong"} />
-        )}
+        {error && <Error errorMessage={{ ...error }} />}
         <div style={{ marginTop: "50px" }} className="w-full">
           <form onSubmit={submitFormHandler}>
             <div style={{ marginBottom: "20px" }}>

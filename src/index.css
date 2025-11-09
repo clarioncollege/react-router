@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary: #e50914;
+  --dark: #141414;
+  --light: #f4f4f4;
+  --gray: #8c8c8c;
+  --card-bg: #1f1f1f;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  min-height: 100vh;
+}
