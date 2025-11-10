@@ -3,10 +3,7 @@ import styles from "./MovieCard.module.css";
 
 function MovieCard(props) {
   return (
-    <Link
-      to={`/movies/${props?.movieId}?title=${props?.movieTitle}`}
-      className={styles.movie_card}
-    >
+    <Link to={`/movies/${props?.movieId}`} className={styles.movie_card}>
       <img
         src={`https://image.tmdb.org/t/p/w500${props?.moviePoster}`}
         alt="Movie Poster"
