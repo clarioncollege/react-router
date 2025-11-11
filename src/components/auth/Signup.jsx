@@ -59,7 +59,9 @@ function Signup() {
         </h1>
         <p>Sign up to get Started</p>
 
-        {error && <Error errorMessage={{ ...error }} />}
+        {Object.keys(error).length > 0 && (
+          <Error errorMessage={Object.values(error)[0]} />
+        )}
         <div style={{ marginTop: "50px" }} className="w-full">
           <form onSubmit={submitFormHandler}>
             <div style={{ marginBottom: "20px" }}>
