@@ -90,7 +90,7 @@ export function useFormValidation() {
       }
     }
     setError({});
-    setFormIsValid(Object.keys(error).length === 0);
+    setFormIsValid(true);
   }
 
   return { error, formIsValid, validateForm };
